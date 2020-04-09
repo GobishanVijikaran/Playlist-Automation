@@ -1,38 +1,49 @@
 # Add Docstring explaining the script
 import os
-import urllib.request
-import re
-import google_auth_oauthlib.flow
-import googleapiclient.discovery
-import googleapiclient.errors
+import json
+import requests
+from secrets import spotify_token, spotify_user_id
 
-
-# Create Class (always running?)
-# Login to Youtube
-# Liked Videos (songs)
-# Create new playlist
-# Search for song
-# Create new playlist
 
 class PlaylistAutomation:
     def __init__(self):
+        self.spotify_user_id = spotify_user_id
+        self.spotify_token = spotify_token
         pass
+
     def login_youtube(self):
         pass
 
     # https://developers.google.com/youtube/v3/docs/playlists
     def get_liked_videos(self):
         pass
+
     def yt_playlist(self):
-        os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
-
-        api_service_name = "youtube"
-        api_version = "v3"
-        secrets_file = "secrets.json"
-
-
         pass
+
     def get_song(self):
         pass
+
     def spotify_playlist(self):
-        pass
+        query = f"https://api.spotify.com/v1/users/{self.spotify_user_id}/playlists"
+
+        request_body = json.dumps({
+            "name": "YouTube Playlist",
+            "description": "Songs from your Youtube playlist now on Spotify",
+            "public": False
+        })
+
+        http_header = {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": "Bearer {}".format(self.spotify_token)
+        }
+
+        response = requests.post(url=query, data=request_body, headers=http_header)
+        response_mod = response.json()
+        playlist_id = response_mod["id"]
+
+        # Adding to Playlist
+        track_uri = "spotify:track:6rqhFgbbKwnb9MLmUQDhG6"
+        track_query = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?uris={track_uri.replace(':', '%3A')}"
+        add_tracks = requests.post(url=track_query, headers=http_header)

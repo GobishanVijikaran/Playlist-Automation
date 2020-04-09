@@ -1,0 +1,7 @@
+yt_api_key = "AIzaSyA6vZvBuP2cN9Ua-olEXPQtN4PQ8K6ivKY"
+
+spotify_client_id = "3a2f1544e46b468d85e751405787fc78"
+spotify_client_secret = "803ec58ae45d45fc9750183658124452"
+
+spotify_user_id = "gobishan2000"
+spotify_token = "BQBqUTJrjoMjE6iVgVv6GHLn7lN_nDRB1YibwqfWTvGRpGDq51BLnvj0zxNkrJXe2-mWlzuUPFWqMgPzwqPEGl3X2ucYuXcZSMaiRNAFwWVyBLEk_RrEPinywZwsgypYG0JIYlj6E6yG4-ZWCalx042YvoZsjg3y9I5qCv2GaAY1gLzuZ8LZ-AQdq_W-A5KslQV6Skjn__A9LEGw9hYeVH-le5jpQy4are73JnAiKhSx0BMn1mzT3U0Iki_ixTD2ljWx7YZPw6sh"
