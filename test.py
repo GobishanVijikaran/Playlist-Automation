@@ -1,6 +1,14 @@
 import requests
 import json
-from secrets import spotify_token, spotify_user_id
+from secrets import spotify_token, spotify_user_id, yt_api_key
+
+# Retrieve Data from Youtube Playlist
+channel_id = "UCwCxk4DVCaPXJJgRXqsrVRg" #add to secrets file later
+yt_query = "https://www.googleapis.com/youtube/v3/playlists"
+yt_body = json.dumps({
+    "key" : yt_api_key
+})
+yt_response = requests.get(url=yt_query, headers=header)
 
 query = f"https://api.spotify.com/v1/users/{spotify_user_id}/playlists"
 request_body = json.dumps({
@@ -15,10 +23,7 @@ header = {
     "Authorization":"Bearer {}".format(spotify_token)
 }
 
-response = requests.post(
-    url=query,
-    data=request_body,
-    headers=header)
+response = requests.post(url=query, data=request_body, headers=header)
 print(response)
 response_mod = response.json()
 print(response_mod)
