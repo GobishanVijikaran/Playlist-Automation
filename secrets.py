@@ -1,7 +1,8 @@
-yt_api_key = "AIzaSyA6vZvBuP2cN9Ua-olEXPQtN4PQ8K6ivKY"
+# YouTube
+yt_api_key = "API_KEY"
 
-spotify_client_id = "3a2f1544e46b468d85e751405787fc78"
-spotify_client_secret = "803ec58ae45d45fc9750183658124452"
+# Spotify
+spotify_user_id = "YOUR_USER_ID"
+spotify_token = "OAUTH_TOKEN"
 
-spotify_user_id = "gobishan2000"
-spotify_token = "BQB2xcPeZbFaeRKyZSfVoMLsdLV9MiG8ABZcbsxe7rlx1xbU91Je6MNzmU_Uv2rOyXPFIyOHNY2m2HRQW9J2i7IHM7yEkwMgQwUDuSM1wfwdlMeFR521Gq47l3hkPpaekT_S1JqGKxnEK_PTtwEaw-WvzcxJQikOF-Cs31iAFhQYwof6tRuggy_Bq5cNWH7j2dhhCQkiwra5j0ZzVitBSq8_0oQs779jsrnp6oE5qrzC7V-S3iiYadgzLdj7MsnAeN9MWC5DZjz6"
+
