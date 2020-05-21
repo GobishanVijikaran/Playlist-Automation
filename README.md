@@ -1,4 +1,4 @@
-# Playlist-Automation
+# Playlist-Converter
 
 Convert any YouTube music playlist (either yours or a public one) into a new Spotify playlist with the use of the [Spotify API](https://developer.spotify.com/ "Spotify API title") and the [YouTube API](https://developers.google.com/youtube/ "YouTube API title"). 
 
